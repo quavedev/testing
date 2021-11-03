@@ -6,5 +6,5 @@ export const mockMethodCall = (methodName, ...args) => {
 
   const methodInstance = Meteor.server.method_handlers[methodName];
 
-  methodInstance.apply(context, [...args]);
+  return methodInstance.apply(context, [...args]);
 };
